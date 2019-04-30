@@ -16,9 +16,9 @@ export const UPDATE_CUSTOMER = '[Customer] UPDATE_CUSTOMER';
 export const UPDATE_CUSTOMER_SUCCESS = '[Customer] UPDATE_CUSTOMER_SUCCESS';
 export const UPDATE_CUSTOMER_ERROR = '[Customer] UPDATE_CUSTOMER_ERROR';
 
-export const GET_CUSTOMERS = '[Customer] GET_CUSTOMERES';
-export const GET_CUSTOMERS_SUCCESS = '[Customer] GET_CUSTOMERES_SUCCESS';
-export const GET_CUSTOMERS_ERROR = '[Customer] GET_CUSTOMERES_ERROR';
+export const GET_CUSTOMERS = '[Customer] GET_CUSTOMERS';
+export const GET_CUSTOMERS_SUCCESS = '[Customer] GET_CUSTOMERS_SUCCESS';
+export const GET_CUSTOMERS_ERROR = '[Customer] GET_CUSTOMERS_ERROR';
 
 export const DELETE_CUSTOMER = '[Customer] DELETE_CUSTOMER';
 export const DELETE_CUSTOMER_SUCCESS = '[Customer] DELETE_CUSTOMER_SUCCESS';
@@ -40,11 +40,10 @@ export class GetCustomers implements Action {
   readonly type = GET_CUSTOMERS;
 }
 
-// Add GetCustomersSuccess action here
-
-
-
-
+export class GetCustomersSuccess implements Action {
+  readonly type = GET_CUSTOMERS_SUCCESS;
+  constructor(public readonly payload: Customer[]) {}
+}
 
 export class GetCustomersError implements Action {
   readonly type = GET_CUSTOMERS_ERROR;
